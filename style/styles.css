@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  background: #171818;
+  overflow: hidden;
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.1);
+  height: 28em;
+  width: 15em;
+  border-radius: 15em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  transition: all 2s;
+}
+
+.day {
+  background: linear-gradient(#0187a2, #01cbf4, #48e0fe, #71e7fe, #d6f8ff);
+  transition: all 2s;
+}
+
+.sunset {
+  background: linear-gradient(#fc7174, #eb6859, #fc8862, #fda26b, #fdbb63);
+  transition: all 2s;
+}
+
+.night {
+  background: linear-gradient(#070b34, #141852, #2b2f77, #6b4984, #8559bb);
+  transition: all 2s;
+}
+
+.spinner {
+  height: 28.12em;
+  width: 28.12em;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: 8em;
+  left: -6.5em;
+  transition: all 2s;
+}
+
+.spinner0 {
+  transform: rotate(0deg);
+}
+
+.spinner120 {
+  transform: rotate(-120deg);
+}
+
+.spinner240 {
+  transform: rotate(-240deg);
+}
+
+.sun,
+.sunset-sun,
+.moon {
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.sun {
+  background: #f6d836;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sunset-sun {
+  background: #fc9600;
+  top: 68%;
+  right: 0;
+}
+
+.moon {
+  box-shadow: 1.25em -1.25em 0 0 #dde1e4;
+  top: 18em;
+  left: -2em;
+  transform: rotate(65deg);
+}
+
+
+.moon::before,
+.moon::after {
+  background: rgba(255, 255, 255, 0.15);
+  position: absolute;
+  content: "";
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  left: 3.65em;
+  top: .6em;
+}
+
+.sun::before,
+.sun::after,
+.sunset-sun::before,
+.sunset-sun::after {
+  background: rgba(255, 255, 255, 0.15);
+  position: absolute;
+  content: "";
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+}
+
+.sun::before,
+.sunset-sun::before,
+.moon::before {
+  height: 7.5em;
+  width: 7.5em;
+}
+
+.sun::after,
+.sunset-sun::after,
+.moon::after {
+  height: 11.5em;
+  width: 11.5em;
+}
+
+img {
+  height: 28em;
+  width: 28em;
+  position: absolute;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 0.2em;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 2em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em;
+  width: 4.8em;
+}
